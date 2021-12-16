@@ -68,8 +68,37 @@ puts assign_name('Kevin') == 'Kevin'
 puts assign_name == 'Bob'
 
 
+#Multiply the Sum
 def add(num1, num2)
   num1 + num2
 end
 
-puts add(2,2)
+def multiply(num1, num2)
+  num1*num2
+end
+
+puts add(2, 2) == 4
+puts add(5, 4) == 9
+puts multiply(add(2, 2), add(5, 4)) == 36
+
+
+#Random Sentence
+names = ['Dave', 'Sally', 'George', 'Jessica']
+activities = ['walking', 'running', 'cycling']
+
+def name(names)
+  i = rand(3)
+  names[i]
+end
+
+def activity(activities)
+  i = rand(3)
+  activities[i]
+end
+
+def sentence(name, activity)
+ "#{name} loves #{activity}"
+end
+
+puts sentence(name(names), activity(activities))
+
